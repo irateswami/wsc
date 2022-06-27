@@ -1,3 +1,3 @@
-module github.com/gorilla/websocket
+module github.com/irateswami/wsc
 
-go 1.12
+go 1.18
