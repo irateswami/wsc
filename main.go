@@ -17,7 +17,7 @@ var (
 )
 
 type Database struct {
-	Mut  sync.RWMutex
+	Mut  *sync.RWMutex
 	Data map[string][]byte
 }
 
@@ -72,7 +72,7 @@ func main() {
 
 	db := Database{
 		Data: data,
-		Mut:  mut,
+		Mut:  &mut,
 	}
 
 	http.HandleFunc("/insert", db.insert)
